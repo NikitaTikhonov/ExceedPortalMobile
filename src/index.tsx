@@ -1,32 +1,20 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * Generated with the TypeScript template
- * https://github.com/react-native-community/react-native-template-typescript
- *
- * @format
- */
-
 import * as React from 'react';
-import { SafeAreaView } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { DetailsScreen } from '_screens/DetailsScreen';
+import { HomeScreen } from '_screens/HomeScreen';
 
-import { Card } from '_organisms/index';
+const Stack = createStackNavigator();
 
-// declare const global: { HermesInternal: null | {} };
-
-const App = () => {
+function App() {
   return (
-    <>
-      <SafeAreaView>
-        <Card
-          headerText={'IT IS WORK'}
-          text={'URA'}
-          backgroundColor={'green'}
-        />
-      </SafeAreaView>
-    </>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Details" component={DetailsScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-};
+}
 
 export default App;
