@@ -9,9 +9,9 @@
  */
 
 import * as React from 'react';
-import { SafeAreaView, StatusBar } from 'react-native';
+import { SafeAreaView } from 'react-native';
 
-import { BasicHeader } from './components/atoms';
+import { Card } from '_organisms/index';
 
 // declare const global: { HermesInternal: null | {} };
 
@@ -19,8 +19,11 @@ const App = () => {
   return (
     <>
       <SafeAreaView>
-        <StatusBar barStyle="dark-content" />
-        <BasicHeader text={'Test'} />
+        <Card
+          headerText={'IT IS WORK'}
+          text={'URA'}
+          backgroundColor={'green'}
+        />
       </SafeAreaView>
     </>
   );

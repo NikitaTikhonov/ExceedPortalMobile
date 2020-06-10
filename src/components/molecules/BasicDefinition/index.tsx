@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { BasicHeader, BasicText } from '@atoms';
+import { BasicHeader, BasicText } from '_atoms/index';
 
 const BasicDefinition = ({ text, headerText }: Props) => {
   return (
